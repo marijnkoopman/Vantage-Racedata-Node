@@ -34,6 +34,7 @@ function handle_message(message) {
     if(message.lap) {
         let toGo = message.lap.roundsToGo;
         let raceId = message.raceId;
+        console.log(toGo, raceId, racer_colors[raceId]);
     }
 }
 
