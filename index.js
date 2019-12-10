@@ -32,9 +32,10 @@ function handle_message(message) {
         }
     }
     if(message.lap) {
-        let toGo = message.lap.roundsToGo;
+        let toGo = message.lap.roundsToGo - 1;
         let raceId = message.raceId;
-        console.log(toGo, raceId, racer_colors[raceId]);
+        if(toGo) console.log(`Racer ${racer_colors[raceId]} moet nog ${toGo} rondjes`);
+        // console.log(toGo, racer_colors[raceId]);
     }
 }
 
