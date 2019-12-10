@@ -8,8 +8,8 @@ Webbrowsers zijn tegenwoordig standaard op vele apparaten aanwezig en webpagina'
 
 Voor installatie is het noodzakelijk dat NodeJS geinstalleerd is op de betreffende computer, inclusief de NPM Package Manager. Vervolgens in een Terminal naar de root-map van deze app (vantage-node) navigeren en daar de volgende commando's runnen:
 
-	npm install
-	node index.js
+	npm i
+	node .
 
 De Node-app start dan op. Stoppen kan met ctrl-c.
 
