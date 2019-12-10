@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Lapboard Remote</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: black;
+        }
+      body {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        }
+      form {width: 100%; height: 100%;}
+      form input {
+        margin: auto;
+        width: 49%;
+        height: 30%;
+        font-size: 20vw;
+        }
+      form input::-webkit-inner-spin-button, form ::-webkit-outer-spin-button {
+        opacity: 1;
+      }
+      form button {
+        width: 100%;
+        height: 20%;
+        margin-top: 5%;
+        background: rgb(130, 224, 255);
+        font-size: 10vh;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input id="pushWhite" autocomplete="off" type="number" value="0" style="color: white;"/>
+      <input id="pushRed" autocomplete="off" type="number" value="0" style="color: red;"/>
+      <input id="pushYellow" autocomplete="off" type="number" value="0" style="color: yellow"/>
+      <input id="pushBlue" autocomplete="off" type="number" value="0" style="color: blue"/>
+      <button>Send</button>
+    </form>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      function x() {
+        socket = io();
+        $('form').submit(function(){
+          socket.emit('lapChange', 'white', $('#pushWhite').val());
+          socket.emit('lapChange', 'red', $('#pushRed').val());
+          socket.emit('lapChange', 'yellow', $('#pushYellow').val());
+          socket.emit('lapChange', 'blue', $('#pushBlue').val());
+          return false;
+        });
+
+      }
+        
+        x();
+    </script>
+  </body>
+</html>
