@@ -12,3 +12,5 @@ Bij elk "lap" object dat binnenkomt voor het daar genoemde raceID een lookup van
 Daarna de variabele van die kleur (0-3) updaten met het nieuwe getal voor "roundsToGo"
 
 Vervolgens de geupdate variabel naar de socket pushen
+
+test blabla
