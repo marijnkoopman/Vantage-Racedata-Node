@@ -1,5 +1,22 @@
 const net = require("net");
 require("colors");
+const express = require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const port = process.env.PORT || 3000;
+const giveColor = new Map([
+    [0, 'white'],
+    [1, 'red'],
+    [2, 'yellow'],
+    [3, 'blue'],
+]);
+
+app.use(express.static("./"));
+
+http.listen(port, function(){
+  console.log('listening on *:' + port);
+});
 
 const client = net.createConnection(52010, "192.168.10.249", () => {
     client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Marijn HTML Lapboard","version":"0.1"}\n`);
@@ -34,8 +51,11 @@ function handle_message(message) {
     if(message.lap) {
         let toGo = message.lap.roundsToGo - 1;
         let raceId = message.raceId;
-        if(toGo) console.log(`Racer ${racer_colors[raceId]} moet nog ${toGo} rondjes`);
-        // console.log(toGo, racer_colors[raceId]);
+        if(toGo) {
+            let color = giveColor.get(racer_colors[raceId]);
+            console.log(`Racer ${color} moet nog ${toGo} rondjes`);
+            io.emit('lapChange', color, toGo);
+        }
     }
 }
 
@@ -43,6 +63,13 @@ client.on("end", () => {
     console.log("Connection was broken");
 });
 
+// Relay Lapboard Remotecontrol
+io.on('connection', function(socket){
+    socket.on('lapChange', function(color, toGo){
+      console.log(color, toGo);
+      io.emit('lapChange', color, toGo);
+    });
+  });
 
 // Send fake data
 const serverline = require("serverline");
