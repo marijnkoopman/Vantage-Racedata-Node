@@ -1,0 +1,14 @@
+JSON deconstructie, drie komma's (,,,) betekent een willekeurig aantal komma's.
+
+{"races":[{"race":{"id":"uniekestring",,,"color":0,,,},{"race":{"id":anderestring},,,"color:1,,,},,,},,,],,,}   //colors 0-3
+
+{"lap":{,,,"roundsToGo":1,,,},,,"raceId":"uniekestring",,,}
+
+
+Bij elk "races" object dat binnenkomt moet voor elke race een object adhv race-id gemaakt worden (als die nog niet bestaat)
+In dit object moet bij het race-id de color genoteerd worden
+
+Bij elk "lap" object dat binnenkomt voor het daar genoemde raceID een lookup van de color doen
+Daarna de variabele van die kleur (0-3) updaten met het nieuwe getal voor "roundsToGo"
+
+Vervolgens de geupdate variabel naar de socket pushen
