@@ -39,6 +39,8 @@ function handle_lap(message) {
 	if(toGo) {
 		let color = giveColor.get(racer_colors[raceId]);
 		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-		io.emit("lap", { color, toGo });
+		let n_obj = {}
+		n_obj[color] = toGo;
+		io.emit("lap", n_obj);
 	}
 }
