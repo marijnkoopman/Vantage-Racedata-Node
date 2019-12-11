@@ -1,12 +1,5 @@
 const net = require("net");
 const handle_message = require("./handle_message");
-const giveColor = new Map([
-	[0, "white"],
-	[1, "red"],
-	[2, "yellow"],
-	[3, "blue"],
-]);
-let racer_colors = {}
 const client = net.createConnection(52010, "192.168.10.249", () => {
 	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Marijn HTML Lapboard","version":"0.1"}\n`);
 });

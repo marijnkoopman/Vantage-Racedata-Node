@@ -1,5 +1,11 @@
 
 const { io } = require("./server");
+const giveColor = new Map([
+	[0, "white"],
+	[1, "red"],
+	[2, "yellow"],
+	[3, "blue"],
+]);
 let racer_colors = {}
 
 module.exports = message => {
@@ -33,6 +39,6 @@ function handle_lap(message) {
 	if(toGo) {
 		let color = giveColor.get(racer_colors[raceId]);
 		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-		io.emit("lapChange", { color, toGo });
+		io.emit("lap", { color, toGo });
 	}
 }
