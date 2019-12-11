@@ -5,12 +5,13 @@ JSON deconstructie, drie komma's (,,,) betekent een willekeurig aantal komma's.
 {"lap":{,,,"roundsToGo":1,,,},,,"raceId":"uniekestring",,,}
 
 
-Bij elk "races" object dat binnenkomt moet voor elke race een object adhv race-id gemaakt worden (als die nog niet bestaat)
-In dit object moet bij het race-id de color genoteerd worden
+Bij elk "races" object dat binnenkomt wordt voor elke race een object adhv race-id gemaakt (als die nog niet bestaat)
+In dit object wordt bij het race-id de color genoteerd. Bestaat het object al dan wordt waar nodig geupdate.
 
-Bij elk "lap" object dat binnenkomt voor het daar genoemde raceID een lookup van de color doen
-Daarna de variabele van die kleur (0-3) updaten met het nieuwe getal voor "roundsToGo"
+Bij elk "lap" object dat binnenkomt wordt voor het daar genoemde raceID een lookup van de color gedaan.
+Daarna wordt de variabel van die kleur geupdate met het nieuwe getal voor "roundsToGo" waarna color en toGo naar de frontend gepusht worden via de websocket.
 
-Vervolgens de geupdate variabel naar de socket pushen
 
-test blabla
+To Do:
+
+Bij laden nieuwe race (of evt startschot) een emit doen voor alle kleuren met het nieuwe aantal rondjes (zonder -1 voor het startschot, -1 na het startschot). Als een kleur niet meedoet in die rit dan een lege toGo voor die kleur emitten zodat aan de frontend niets weergegeven wordt.
