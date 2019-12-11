@@ -1,5 +1,6 @@
 const net = require("net");
 const { io } = require("./server");
+const handle_message = require("./handle_message");
 const giveColor = new Map([
 	[0, "white"],
 	[1, "red"],
@@ -27,23 +28,6 @@ function handle_json(array) {
 		console.log(`${new Date().toJSON().split(/T|\./)[1]} NEW MESSAGE ${"-".repeat(30)}`.bold.green);
 		handle_message(message);
 	});
-}
-
-function handle_message(message) {
-	if(message.races) {
-		for(let race of message.races) {
-			racer_colors[race.race.id] = race.race.color;
-		}
-	}
-	if(message.lap) {
-		let toGo = message.lap.roundsToGo - 1;
-		let raceId = message.raceId;
-		if(toGo) {
-			let color = giveColor.get(racer_colors[raceId]);
-			console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-			io.emit("lapChange", { color, toGo });
-		}
-	}
 }
 
 client.on("end", () => {
