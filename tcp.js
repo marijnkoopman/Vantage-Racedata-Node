@@ -40,7 +40,7 @@ function handle_message(message) {
 		if(toGo) {
 			let color = giveColor.get(racer_colors[raceId]);
 			console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-			io.emit('lapChange', color, toGo);
+			io.emit("lapChange", { color, toGo });
 		}
 	}
 }

@@ -18,6 +18,13 @@ server.listen(port, () => {
 	console.log("Listening on " + port);
 });
 
+io.on("connection", socket => {
+	socket.on("manualLapChange", data => {
+		console.log(data);
+		io.emit("lap", data);
+	});
+});
+
 module.exports = {
 	app,
 	server,
