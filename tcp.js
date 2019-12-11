@@ -1,4 +1,5 @@
 const net = require("net");
+const { io } = require("./server");
 const giveColor = new Map([
 	[0, "white"],
 	[1, "red"],
@@ -49,7 +50,11 @@ client.on("end", () => {
 	console.log("Connection was broken");
 });
 
-module.exports = client;
+module.exports = {
+	client,
+	handle_json,
+	handle_message
+}
 
 
 // Eval
