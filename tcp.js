@@ -1,5 +1,4 @@
 const net = require("net");
-const { io } = require("./server");
 const handle_message = require("./handle_message");
 const giveColor = new Map([
 	[0, "white"],
