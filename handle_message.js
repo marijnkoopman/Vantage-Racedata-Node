@@ -1,5 +1,6 @@
 
 const { io } = require("./server");
+let racer_colors = {}
 
 module.exports = message => {
 	switch(get_message_type(message)) {
