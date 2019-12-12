@@ -4,7 +4,7 @@ Deze NodeJS-applicatie ontvangt data van de Vantage Server en maakt die vervolge
 Webbrowsers zijn tegenwoordig standaard op vele apparaten aanwezig en webpagina's kunnen gemakkelijk op elk schermformaat optimaal weergegeven worden. Dat zorgt ervoor dat elk apparaat binnen het netwerk aan een browser genoeg heeft om te fungeren als Vantage Racedata Display. Dit zonder ook maar iets te hoeven installeren.
 
 # Ingebruikname
-Deze node-app moet op een pc binnen het netwerk geinstalleerd worden, die pc fungeert dan als server. Op de 'clients' hoeft niets voorbereid. Voor installatie is het noodzakelijk dat NodeJS geinstalleerd is op de computer, inclusief de NPM Package Manager. Vervolgens de map van deze app (\vantage-node) openen en daar dubbelklikken op runOnce. Dit installeert de benodigde node-packages.
+Deze node-app moet op een pc binnen het netwerk geinstalleerd worden, die pc fungeert dan als server. Op de 'clients' hoeft niets voorbereid. Voor installatie is het noodzakelijk dat NodeJS geinstalleerd is op de computer, inclusief de Node Package Manager (ofwel NPM). Vervolgens de map van deze app (\vantage-node) openen en daar dubbelklikken op runOnce. Dit installeert de benodigde node-packages.
 
 Starten kan vervolgens door te dubbelklikken op "start". Stoppen van de node kan met ctrl-c.
 
