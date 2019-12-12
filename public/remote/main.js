@@ -1,6 +1,6 @@
 const socket = io();
 
-document.querySelector("button").addEventListener("click", send);
+document.querySelector("button.send").addEventListener("click", send);
 
 function send() {
 	let data = {
@@ -11,4 +11,18 @@ function send() {
 	}
 	console.log("Sent", data);
 	socket.emit("manualLapChange", data);
+}
+
+document.querySelector(".audio").addEventListener("mousedown", audio_start);
+document.querySelector(".audio").addEventListener("touchdown", audio_start);
+document.querySelector(".audio").addEventListener("mouseup", audio_end);
+document.querySelector(".audio").addEventListener("touchup", audio_end);
+
+function audio_start() {
+	console.log("Start...");
+	socket.emit("audio", { play: true });
+}
+function audio_end() {
+	console.log("End...");
+	socket.emit("audio", { play: false });
 }

@@ -23,6 +23,16 @@ io.on("connection", socket => {
 		console.log(data);
 		io.emit("lap", data);
 	});
+
+	socket.on("audio", data => {
+
+		// Ik wil niet dat zomaar alles verstuurd kan worden...
+		io.emit("audio", { 
+			play: data.play ? true : false 
+		});
+
+	});
+
 });
 
 module.exports = {

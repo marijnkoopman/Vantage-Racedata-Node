@@ -4,15 +4,13 @@
 	box-sizing: border-box;
 	border: none;
 	background-color: black;
+	color: white;
 }
 body {
-	display: flex;
-	width: 100%;
-	height: 100vh;
 }
 form {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 form input {
 	margin: auto;
@@ -23,7 +21,7 @@ form input {
 form input::-webkit-inner-spin-button, form ::-webkit-outer-spin-button {
 	opacity: 1;
 }
-form button {
+button {
 	width: 100%;
 	height: 20%;
 	margin-top: 5%;
