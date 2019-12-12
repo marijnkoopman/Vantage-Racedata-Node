@@ -1,8 +1,9 @@
 require("colors");
+require("dotenv").config();
 
 const net = require("net");
 const fs = require("fs");
-const client = net.createConnection(52010, "192.168.10.249", () => {
+const client = net.createConnection(process.env.PORT, process.env.HOST, () => {
 	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Logger","version":"0.1"}\n`);
 });
 
