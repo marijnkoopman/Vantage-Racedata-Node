@@ -21,5 +21,5 @@ Indien een ander IP of een andere poort vereist is, dan kan dat aangepast worden
 
 Navigeer in een webbrowser naar het IP van de computer waar de node op draait aangevuld met ":8080" dit opent het rondenbord. Iets vergelijkbaars geldt voor de testmodule van het rondenbord. Hieronder voorbeelden voor het navigeren op de eigen machine dmv het eigen IP 127.0.0.1
 
-	127.0.0.1:8080/lapboard		//Rondenbord
-	127.0.0.1:8080/remote		//Testmodule Rondenbord
+	127.0.0.1:8080/lapboard		// Rondenbord
+	127.0.0.1:8080/remote		// Testmodule Rondenbord
