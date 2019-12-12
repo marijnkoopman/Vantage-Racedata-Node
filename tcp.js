@@ -1,7 +1,7 @@
 const net = require("net");
 const handle_message = require("./handle_message");
-const client = net.createConnection(52010, "192.168.10.249", () => {
-	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Marijn HTML Lapboard","version":"0.1"}\n`);
+const client = net.createConnection(process.env.PORT, process.env.HOST, () => {
+	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"${process.env.NAME}","version":"0.1"}\n`);
 });
 
 let cache = "";
