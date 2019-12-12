@@ -25,7 +25,7 @@ io.on("connection", socket => {
 	});
 
 	socket.on("audio", data => {
-
+		
 		// Ik wil niet dat zomaar alles verstuurd kan worden...
 		io.emit("audio", { 
 			play: data.play ? true : false 

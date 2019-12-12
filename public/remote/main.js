@@ -14,9 +14,9 @@ function send() {
 }
 
 document.querySelector(".audio").addEventListener("mousedown", audio_start);
-document.querySelector(".audio").addEventListener("touchdown", audio_start);
+document.querySelector(".audio").addEventListener("touchstart", audio_start);
 document.querySelector(".audio").addEventListener("mouseup", audio_end);
-document.querySelector(".audio").addEventListener("touchup", audio_end);
+document.querySelector(".audio").addEventListener("touchend", audio_end);
 
 function audio_start() {
 	console.log("Start...");
