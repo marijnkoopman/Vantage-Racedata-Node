@@ -46,6 +46,16 @@ function handle_lap(message) {
 		} else {
 			race_end(message, color);
 		}
+	} else {
+		// Mogelijk (meestal) HeatActivatedEvent
+		let emit_obj = {}
+		for(let obj of message.races) {
+			let raceId = obj.id;
+			let toGo = obj.estimatedLaps[0].roundsToGo();
+			let color = giveColor.get(racer_colors[raceId]);
+			emit_obj[color] = toGo;
+		}
+		io.emit("lap", emit_obj);
 	}
 }
 
