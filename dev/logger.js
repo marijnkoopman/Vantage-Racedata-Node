@@ -22,7 +22,7 @@ function handle_json(array) {
 	array.forEach(message => {
 		console.log(`${new Date().toJSON().split(/T|\./)[1]} NEW MESSAGE ${"-".repeat(30)}`.bold.green);
 		console.log(message);
-		let path = __dirname + `\\logs\\${Date.now()} ${message.typeName}.json`;
+		let path = __dirname + `\\logs\\${ new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 5).join("-")} ${message.typeName}.json`;
 		fs.writeFileSync(path, JSON.stringify(message, null, "\t"));
 		// fs.writeFileSync("")
 	});
