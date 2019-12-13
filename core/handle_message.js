@@ -32,6 +32,17 @@ function handle_races(message) {
 	for(let race of message.races) {
 		racer_colors[race.race.id] = race.race.color;
 	}
+
+	// Mogelijk (meestal) HeatActivatedEvent
+	let emit_obj = {}
+	for(let obj of message.races) {
+		let raceId = obj.id;
+		let toGo = obj.estimatedLaps[0].roundsToGo();
+		let color = giveColor.get(racer_colors[raceId]);
+		emit_obj[color] = toGo;
+	}
+	io.emit("lap", emit_obj);
+
 }
 function handle_lap(message) {
 	let toGo = message.lap.roundsToGo - 1;
@@ -46,16 +57,6 @@ function handle_lap(message) {
 		} else {
 			race_end(message, color);
 		}
-	} else {
-		// Mogelijk (meestal) HeatActivatedEvent
-		let emit_obj = {}
-		for(let obj of message.races) {
-			let raceId = obj.id;
-			let toGo = obj.estimatedLaps[0].roundsToGo();
-			let color = giveColor.get(racer_colors[raceId]);
-			emit_obj[color] = toGo;
-		}
-		io.emit("lap", emit_obj);
 	}
 }
 
