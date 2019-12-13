@@ -1,0 +1,187 @@
+{
+	"races": [
+		{
+			"race": {
+				"id": "568af1b8-513c-49b9-a867-00dd26ec52d7",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "E.T.",
+						"firstName": "Egbert",
+						"surnamePrefix": "van de",
+						"surname": "Pijpekamp"
+					},
+					"personId": "f9cb4741-83b7-4e19-97e3-8216d335271d",
+					"id": "0d562a57-d526-4844-9778-f15716d24dc5",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 2,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10180156",
+					"licenseFlags": 6,
+					"status": 1,
+					"category": "HSB",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 5001,
+					"clubShortName": "LACUSTRIS",
+					"clubFullName": "NSSSV Lacustris",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Egbert van de Pijpekamp",
+					"shortName": "van de Pijpekamp",
+					"gender": 0,
+					"added": "2018-09-28T21:19:40.4397026",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 3,
+				"lane": 1,
+				"color": 1,
+				"personalBest": 462000000,
+				"seasonBest": 463240000,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "f9cb4741-83b7-4e19-97e3-8216d335271d",
+						"type": "MYLAPS ProChip",
+						"code": 103352176,
+						"label": null,
+						"set": 6
+					},
+					{
+						"personId": "f9cb4741-83b7-4e19-97e3-8216d335271d",
+						"type": "MYLAPS ProChip",
+						"code": 106873592,
+						"label": null,
+						"set": 6
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 187270000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 187200000,
+					"ranking": null
+				},
+				{
+					"time": 463240000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 276000000,
+					"ranking": null
+				}
+			]
+		},
+		{
+			"race": {
+				"id": "3a571922-2ce5-46f5-bd02-57adefbafb35",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "M.D.",
+						"firstName": "Martijn",
+						"surnamePrefix": "van de",
+						"surname": "Pijpekamp"
+					},
+					"personId": "14ad80b8-b7bb-4bd5-acdb-cd3c046868cd",
+					"id": "afc9920f-47a9-4ca1-ab8f-fb7ada6455b1",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 1,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10155247",
+					"licenseFlags": 10,
+					"status": 1,
+					"category": "H40",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 5608,
+					"clubShortName": "NSV",
+					"clubFullName": "Nijmeegse Schaatsvereniging",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Martijn van de Pijpekamp",
+					"shortName": "van de Pijpekamp",
+					"gender": 0,
+					"added": "2018-09-28T21:19:19.8055224",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 3,
+				"lane": 0,
+				"color": 0,
+				"personalBest": 435200000,
+				"seasonBest": null,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "14ad80b8-b7bb-4bd5-acdb-cd3c046868cd",
+						"type": "MYLAPS ProChip",
+						"code": 107724346,
+						"label": null,
+						"set": 5
+					},
+					{
+						"personId": "14ad80b8-b7bb-4bd5-acdb-cd3c046868cd",
+						"type": "MYLAPS ProChip",
+						"code": 111819612,
+						"label": null,
+						"set": 5
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 175930000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 175900000,
+					"ranking": null
+				},
+				{
+					"time": 435200000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 259300000,
+					"ranking": null
+				}
+			]
+		}
+	],
+	"heat": {
+		"round": 1,
+		"number": 3
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "HeatActivatedEvent"
+}

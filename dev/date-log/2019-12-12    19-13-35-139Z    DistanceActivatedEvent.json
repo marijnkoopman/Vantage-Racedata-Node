@@ -1,0 +1,43 @@
+{
+	"distance": {
+		"id": "55d154f0-238d-4d5a-9672-c5949194c3ea",
+		"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+		"discipline": "SpeedSkating.LongTrack.PairsDistance.Individual",
+		"number": 4,
+		"trackLength": 333,
+		"value": 167,
+		"valueQuantity": 0,
+		"classificationPrecision": 100000,
+		"name": "Testje 167 meter",
+		"distancePointsTableId": null,
+		"starts": "2019-10-28T17:00:00",
+		"lastRaceCommitted": null,
+		"rounds": 1,
+		"startMode": 0,
+		"starter": null,
+		"referee1": null,
+		"referee2": null,
+		"firstHeat": 1,
+		"continuousNumbering": false,
+		"startWeather": {
+			"airTemperature": null,
+			"trackTemperature": null,
+			"windSpeed": null,
+			"humidity": null,
+			"airPressure": null
+		},
+		"endWeather": {
+			"airTemperature": null,
+			"trackTemperature": null,
+			"windSpeed": null,
+			"humidity": null,
+			"airPressure": null
+		},
+		"venueCode": "NYM",
+		"venueDiscipline": "SpeedSkating.LongTrack",
+		"combinations": []
+	},
+	"distanceId": "55d154f0-238d-4d5a-9672-c5949194c3ea",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "DistanceActivatedEvent"
+}

@@ -1,0 +1,43 @@
+{
+	"distance": {
+		"id": "ecc19adf-9348-46d3-84ef-868513314863",
+		"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+		"discipline": "SpeedSkating.LongTrack.PairsDistance.Individual",
+		"number": 1,
+		"trackLength": 333,
+		"value": 500,
+		"valueQuantity": 0,
+		"classificationPrecision": 100000,
+		"name": "500m",
+		"distancePointsTableId": null,
+		"starts": "2019-10-28T15:00:00",
+		"lastRaceCommitted": "2019-09-09T07:52:55.7306809",
+		"rounds": 1,
+		"startMode": 1,
+		"starter": null,
+		"referee1": null,
+		"referee2": null,
+		"firstHeat": 1,
+		"continuousNumbering": false,
+		"startWeather": {
+			"airTemperature": null,
+			"trackTemperature": null,
+			"windSpeed": null,
+			"humidity": null,
+			"airPressure": null
+		},
+		"endWeather": {
+			"airTemperature": null,
+			"trackTemperature": null,
+			"windSpeed": null,
+			"humidity": null,
+			"airPressure": null
+		},
+		"venueCode": "NYM",
+		"venueDiscipline": "SpeedSkating.LongTrack",
+		"combinations": []
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "DistanceActivatedEvent"
+}

@@ -1,0 +1,25 @@
+{
+	"passing": {
+		"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+		"instanceName": "Tester",
+		"presentationSource": {
+			"applianceName": "MYLAPS X2",
+			"applianceInstanceName": "Main",
+			"how": "Optical"
+		},
+		"when": "2019-12-12T19:16:36.019Z",
+		"flags": 33,
+		"time": 162080000,
+		"passed": null,
+		"speed": null,
+		"where": 1
+	},
+	"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+	"heat": {
+		"round": 1,
+		"number": 1
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "RacePassingAddedEvent"
+}

@@ -1,0 +1,25 @@
+{
+	"lap": {
+		"raceId": "9c460779-8f31-471a-87f8-677974d39def",
+		"instanceName": "Tester",
+		"presentationSource": {
+			"applianceName": "",
+			"applianceInstanceName": "",
+			"how": "User"
+		},
+		"when": "2019-12-12T19:20:53.299Z",
+		"time": 570000000,
+		"flags": 96,
+		"points": null,
+		"fixedIndex": null,
+		"fixedRanking": null
+	},
+	"raceId": "9c460779-8f31-471a-87f8-677974d39def",
+	"heat": {
+		"round": 1,
+		"number": 2
+	},
+	"distanceId": "4bbefbbf-1e6c-4173-b95f-e1cf87229392",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "RaceLapAddedEvent"
+}

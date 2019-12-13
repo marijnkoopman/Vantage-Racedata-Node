@@ -1,0 +1,14 @@
+{
+	"index": 0,
+	"rounds": 1,
+	"roundsToGo": 29,
+	"passedLength": 333,
+	"raceId": "c658d3f2-62ff-464d-a66c-977034b5349a",
+	"heat": {
+		"round": 1,
+		"number": 1
+	},
+	"distanceId": "4bbefbbf-1e6c-4173-b95f-e1cf87229392",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "RaceNextLapIndexChangedEvent"
+}

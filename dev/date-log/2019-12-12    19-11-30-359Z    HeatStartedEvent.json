@@ -1,0 +1,11 @@
+{
+	"started": "2019-12-12T19:11:30.650999Z",
+	"clock": 404190,
+	"heat": {
+		"round": 1,
+		"number": 2
+	},
+	"distanceId": "4bbefbbf-1e6c-4173-b95f-e1cf87229392",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "HeatStartedEvent"
+}

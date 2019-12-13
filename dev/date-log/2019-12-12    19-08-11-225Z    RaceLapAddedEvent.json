@@ -1,0 +1,25 @@
+{
+	"lap": {
+		"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+		"instanceName": "Tester",
+		"presentationSource": {
+			"applianceName": "MYLAPS X2",
+			"applianceInstanceName": "Main",
+			"how": "Optical"
+		},
+		"when": "2019-12-12T19:16:36.019Z",
+		"time": 162080000,
+		"flags": 37,
+		"points": null,
+		"fixedIndex": null,
+		"fixedRanking": null
+	},
+	"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+	"heat": {
+		"round": 1,
+		"number": 1
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "RaceLapAddedEvent"
+}

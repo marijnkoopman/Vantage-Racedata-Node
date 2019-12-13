@@ -1,0 +1,20 @@
+{
+	"lap": {
+		"time": 550000000,
+		"index": 1,
+		"rounds": 2,
+		"roundsToGo": 28,
+		"passedLength": 667,
+		"lapTime": 270000000,
+		"ranking": 2
+	},
+	"timeDifference": null,
+	"raceId": "5f8cf0ad-d782-4422-87fa-75658e3538a0",
+	"heat": {
+		"round": 1,
+		"number": 1
+	},
+	"distanceId": "4bbefbbf-1e6c-4173-b95f-e1cf87229392",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "LastPresentedRaceLapChangedEvent"
+}

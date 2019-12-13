@@ -1,0 +1,187 @@
+{
+	"races": [
+		{
+			"race": {
+				"id": "8f861645-4330-45f5-b44f-a47d9ed4b79b",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "M.",
+						"firstName": "Marijn",
+						"surnamePrefix": null,
+						"surname": "Koopman"
+					},
+					"personId": "dfb90a91-4f5c-4cc4-94f0-47d16df5ccad",
+					"id": "bad9509e-77ab-4e78-8419-7bd157fdec0b",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 3,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10165632",
+					"licenseFlags": 6,
+					"status": 1,
+					"category": "HSB",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 5001,
+					"clubShortName": "LACUSTRIS",
+					"clubFullName": "NSSSV Lacustris",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Marijn Koopman",
+					"shortName": "Koopman",
+					"gender": 0,
+					"added": "2018-09-28T21:20:04.3060677",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 4,
+				"lane": 1,
+				"color": 3,
+				"personalBest": 382200000,
+				"seasonBest": null,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "dfb90a91-4f5c-4cc4-94f0-47d16df5ccad",
+						"type": "MYLAPS ProChip",
+						"code": 105372898,
+						"label": null,
+						"set": 8
+					},
+					{
+						"personId": "dfb90a91-4f5c-4cc4-94f0-47d16df5ccad",
+						"type": "MYLAPS ProChip",
+						"code": 115702003,
+						"label": null,
+						"set": 8
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 154510000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 154500000,
+					"ranking": null
+				},
+				{
+					"time": 382200000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 227700000,
+					"ranking": null
+				}
+			]
+		},
+		{
+			"race": {
+				"id": "361b1b47-9ba1-46fc-87bb-49e3ce772b58",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "T.",
+						"firstName": "Tim",
+						"surnamePrefix": null,
+						"surname": "Nijenhuis"
+					},
+					"personId": "c89a154c-81e8-42c7-afed-44acb30d99c9",
+					"id": "94a939fa-9c3b-422f-9808-413d6b846589",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 5,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10175284",
+					"licenseFlags": 6,
+					"status": 1,
+					"category": "HSB",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 5012,
+					"clubShortName": "STG EXERCEO",
+					"clubFullName": "STG Exerceo",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Tim Nijenhuis",
+					"shortName": "Nijenhuis",
+					"gender": 0,
+					"added": "2018-09-29T11:28:15.3366466",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 4,
+				"lane": 0,
+				"color": 2,
+				"personalBest": 426200000,
+				"seasonBest": 442190000,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "c89a154c-81e8-42c7-afed-44acb30d99c9",
+						"type": "MYLAPS ProChip",
+						"code": 106512780,
+						"label": null,
+						"set": 7
+					},
+					{
+						"personId": "c89a154c-81e8-42c7-afed-44acb30d99c9",
+						"type": "MYLAPS ProChip",
+						"code": 106526238,
+						"label": null,
+						"set": 7
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 178760000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 178700000,
+					"ranking": null
+				},
+				{
+					"time": 442190000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 263400000,
+					"ranking": null
+				}
+			]
+		}
+	],
+	"heat": {
+		"round": 1,
+		"number": 4
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "HeatActivatedEvent"
+}

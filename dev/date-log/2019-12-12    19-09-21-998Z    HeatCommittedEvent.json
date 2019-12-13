@@ -1,0 +1,369 @@
+{
+	"races": [
+		{
+			"race": {
+				"id": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "S.",
+						"firstName": "Suzanne",
+						"surnamePrefix": null,
+						"surname": "Schulting"
+					},
+					"personId": "8e9e6233-38a3-45c0-a99f-41b7f5877b47",
+					"id": "8134d8b3-2f3b-47b1-8457-a85cac7f4a6f",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 8,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10154214",
+					"licenseFlags": 10,
+					"status": 1,
+					"category": "DN2",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 1066,
+					"clubShortName": "HCH",
+					"clubFullName": "Hardrijders Club Heerenveen",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Suzanne Schulting",
+					"shortName": "Schulting",
+					"gender": 1,
+					"added": "2019-03-05T17:19:23.7362474",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 1,
+				"lane": 0,
+				"color": 0,
+				"personalBest": 388740000,
+				"seasonBest": 388740000,
+				"result": {
+					"instanceName": "Tester",
+					"status": 4,
+					"timeInvalidReason": null,
+					"points": null
+				},
+				"time": {
+					"applianceName": "",
+					"applianceInstanceName": "",
+					"instanceName": "Tester",
+					"how": "User",
+					"time": 400000000,
+					"timeInfo": 8
+				},
+				"laps": [
+					{
+						"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+						"instanceName": "Tester",
+						"presentationSource": {
+							"applianceName": "MYLAPS X2",
+							"applianceInstanceName": "Main",
+							"how": "Optical"
+						},
+						"when": "2019-12-12T19:16:36.019Z",
+						"time": 162080000,
+						"flags": 37,
+						"points": null,
+						"fixedIndex": null,
+						"fixedRanking": null
+					},
+					{
+						"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+						"instanceName": "Tester",
+						"presentationSource": {
+							"applianceName": "",
+							"applianceInstanceName": "",
+							"how": "User"
+						},
+						"when": "2019-12-12T19:16:59.811Z",
+						"time": 400000000,
+						"flags": 96,
+						"points": null,
+						"fixedIndex": null,
+						"fixedRanking": null
+					}
+				],
+				"transponders": [
+					{
+						"personId": "8e9e6233-38a3-45c0-a99f-41b7f5877b47",
+						"type": "MYLAPS ProChip",
+						"code": 108141979,
+						"label": null,
+						"set": 1
+					},
+					{
+						"personId": "8e9e6233-38a3-45c0-a99f-41b7f5877b47",
+						"type": "MYLAPS ProChip",
+						"code": 111606065,
+						"label": null,
+						"set": 1
+					}
+				]
+			},
+			"start": {
+				"instanceName": "Tester",
+				"presentationSource": {
+					"applianceName": "MYLAPS X2",
+					"applianceInstanceName": "Main",
+					"how": "Start"
+				},
+				"when": "2019-12-12T19:16:19.811Z",
+				"flags": 0
+			},
+			"passings": [],
+			"laps": [
+				{
+					"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+					"instanceName": "Tester",
+					"presentationSource": {
+						"applianceName": "MYLAPS X2",
+						"applianceInstanceName": "Main",
+						"how": "Optical"
+					},
+					"when": "2019-12-12T19:16:36.019Z",
+					"time": 162080000,
+					"flags": 37,
+					"points": null,
+					"fixedIndex": null,
+					"fixedRanking": null
+				},
+				{
+					"raceId": "bef424e4-8364-4c39-8e3c-57adf733fdb5",
+					"instanceName": "Tester",
+					"presentationSource": {
+						"applianceName": "",
+						"applianceInstanceName": "",
+						"how": "User"
+					},
+					"when": "2019-12-12T19:16:59.811Z",
+					"time": 400000000,
+					"flags": 96,
+					"points": null,
+					"fixedIndex": null,
+					"fixedRanking": null
+				}
+			],
+			"estimatedLaps": [
+				{
+					"time": 162080000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 162000000,
+					"ranking": null
+				},
+				{
+					"time": 397280000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 235200000,
+					"ranking": null
+				}
+			]
+		},
+		{
+			"race": {
+				"id": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "J.",
+						"firstName": "Jutta",
+						"surnamePrefix": null,
+						"surname": "Leerdam"
+					},
+					"personId": "0898971e-af34-4f3c-9fe8-87407493d40b",
+					"id": "183d0bfa-dd7d-449a-a732-7ae69486f15b",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 9,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10161535",
+					"licenseFlags": 10,
+					"status": 1,
+					"category": "DN1",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 7110,
+					"clubShortName": "YV PIJNACKER",
+					"clubFullName": "IJsvereniging Pijnacker",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Jutta Leerdam",
+					"shortName": "Leerdam",
+					"gender": 1,
+					"added": "2019-03-05T17:19:44.2354199",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 1,
+				"lane": 1,
+				"color": 1,
+				"personalBest": 378390000,
+				"seasonBest": 378390000,
+				"result": {
+					"instanceName": "Tester",
+					"status": 4,
+					"timeInvalidReason": null,
+					"points": null
+				},
+				"time": {
+					"applianceName": "",
+					"applianceInstanceName": "",
+					"instanceName": "Tester",
+					"how": "User",
+					"time": 400000000,
+					"timeInfo": 0
+				},
+				"laps": [
+					{
+						"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+						"instanceName": "Tester",
+						"presentationSource": {
+							"applianceName": "MYLAPS X2",
+							"applianceInstanceName": "Main",
+							"how": "Optical"
+						},
+						"when": "2019-12-12T19:16:37.719Z",
+						"time": 179080000,
+						"flags": 37,
+						"points": null,
+						"fixedIndex": null,
+						"fixedRanking": null
+					},
+					{
+						"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+						"instanceName": "Tester",
+						"presentationSource": {
+							"applianceName": "",
+							"applianceInstanceName": "",
+							"how": "User"
+						},
+						"when": "2019-12-12T19:16:59.811Z",
+						"time": 400000000,
+						"flags": 96,
+						"points": null,
+						"fixedIndex": null,
+						"fixedRanking": null
+					}
+				],
+				"transponders": [
+					{
+						"personId": "0898971e-af34-4f3c-9fe8-87407493d40b",
+						"type": "MYLAPS ProChip",
+						"code": 111286470,
+						"label": null,
+						"set": 2
+					},
+					{
+						"personId": "0898971e-af34-4f3c-9fe8-87407493d40b",
+						"type": "MYLAPS ProChip",
+						"code": 113842545,
+						"label": null,
+						"set": 2
+					}
+				]
+			},
+			"start": {
+				"instanceName": "Tester",
+				"presentationSource": {
+					"applianceName": "MYLAPS X2",
+					"applianceInstanceName": "Main",
+					"how": "Start"
+				},
+				"when": "2019-12-12T19:16:19.811Z",
+				"flags": 0
+			},
+			"passings": [
+				{
+					"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+					"instanceName": "Tester",
+					"presentationSource": {
+						"applianceName": "MYLAPS X2",
+						"applianceInstanceName": "Main",
+						"how": "Optical"
+					},
+					"when": "2019-12-12T19:16:36.019Z",
+					"flags": 33,
+					"time": 162080000,
+					"passed": null,
+					"speed": null,
+					"where": 1
+				}
+			],
+			"laps": [
+				{
+					"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+					"instanceName": "Tester",
+					"presentationSource": {
+						"applianceName": "MYLAPS X2",
+						"applianceInstanceName": "Main",
+						"how": "Optical"
+					},
+					"when": "2019-12-12T19:16:37.719Z",
+					"time": 179080000,
+					"flags": 37,
+					"points": null,
+					"fixedIndex": null,
+					"fixedRanking": null
+				},
+				{
+					"raceId": "30a9cb6d-2b1e-44e3-b3e2-3ffb04ddd2f7",
+					"instanceName": "Tester",
+					"presentationSource": {
+						"applianceName": "",
+						"applianceInstanceName": "",
+						"how": "User"
+					},
+					"when": "2019-12-12T19:16:59.811Z",
+					"time": 400000000,
+					"flags": 96,
+					"points": null,
+					"fixedIndex": null,
+					"fixedRanking": null
+				}
+			],
+			"estimatedLaps": [
+				{
+					"time": 179080000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 179000000,
+					"ranking": null
+				},
+				{
+					"time": 423100000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 244100000,
+					"ranking": null
+				}
+			]
+		}
+	],
+	"heat": {
+		"round": 1,
+		"number": 1
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "HeatCommittedEvent"
+}

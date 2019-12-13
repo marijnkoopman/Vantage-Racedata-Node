@@ -1,0 +1,187 @@
+{
+	"races": [
+		{
+			"race": {
+				"id": "8bdfee13-7d4b-463f-b329-d1b66c7f773e",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "K.",
+						"firstName": "Kjeld",
+						"surnamePrefix": null,
+						"surname": "Nuis"
+					},
+					"personId": "822026c3-a2e6-4a2b-a2e8-6c5e2d7fbf7b",
+					"id": "d640187a-294a-40db-9dda-fb5cffaf6e0e",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 7,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10157186",
+					"licenseFlags": 6,
+					"status": 1,
+					"category": "HSA",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 7810,
+					"clubShortName": "IJVL",
+					"clubFullName": "IJssport Vereniging Leiden",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Kjeld Nuis",
+					"shortName": "Nuis",
+					"gender": 0,
+					"added": "2018-09-29T11:29:26.6443719",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 2,
+				"lane": 0,
+				"color": 2,
+				"personalBest": 347900000,
+				"seasonBest": 349150000,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "822026c3-a2e6-4a2b-a2e8-6c5e2d7fbf7b",
+						"type": "MYLAPS ProChip",
+						"code": 103690256,
+						"label": null,
+						"set": 3
+					},
+					{
+						"personId": "822026c3-a2e6-4a2b-a2e8-6c5e2d7fbf7b",
+						"type": "MYLAPS ProChip",
+						"code": 112445826,
+						"label": null,
+						"set": 3
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 141150000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 141100000,
+					"ranking": null
+				},
+				{
+					"time": 349150000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 208000000,
+					"ranking": null
+				}
+			]
+		},
+		{
+			"race": {
+				"id": "27d88437-faca-4888-89c6-58914fe2da2a",
+				"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+				"competitor": {
+					"name": {
+						"initials": "A.D.",
+						"firstName": "Dai Dai",
+						"surnamePrefix": null,
+						"surname": "Ntab"
+					},
+					"personId": "e14a8a14-d4e4-4667-98aa-fac5f84780e3",
+					"id": "d9b9076a-3d6c-4f60-b2f0-8f10083df4dd",
+					"listId": "efa4a6a7-2876-477f-b484-5299781011f2",
+					"startNumber": 10,
+					"legNumber": null,
+					"nationalityCode": "NED",
+					"licenseDiscipline": "SpeedSkating.LongTrack",
+					"licenseKey": "10158845",
+					"licenseFlags": 10,
+					"status": 1,
+					"category": "HSA",
+					"class": null,
+					"sponsor": null,
+					"clubCountryCode": "NED",
+					"clubCode": 8078,
+					"clubShortName": "SV VENNEN",
+					"clubFullName": "Schaatsvereniging De Vennen",
+					"from": null,
+					"transponder1": null,
+					"transponder2": null,
+					"fullName": "Dai Dai Ntab",
+					"shortName": "Ntab",
+					"gender": 0,
+					"added": "2019-03-05T17:21:47.2654568",
+					"source": 1,
+					"typeName": "PersonCompetitor"
+				},
+				"round": 1,
+				"heat": 2,
+				"lane": 1,
+				"color": 3,
+				"personalBest": 341500000,
+				"seasonBest": 345500000,
+				"result": null,
+				"time": null,
+				"laps": [],
+				"transponders": [
+					{
+						"personId": "e14a8a14-d4e4-4667-98aa-fac5f84780e3",
+						"type": "MYLAPS ProChip",
+						"code": 109605544,
+						"label": null,
+						"set": 4
+					},
+					{
+						"personId": "e14a8a14-d4e4-4667-98aa-fac5f84780e3",
+						"type": "MYLAPS ProChip",
+						"code": 110826516,
+						"label": null,
+						"set": 4
+					}
+				]
+			},
+			"start": null,
+			"passings": [],
+			"laps": [],
+			"estimatedLaps": [
+				{
+					"time": 139670000,
+					"index": 0,
+					"rounds": 1,
+					"roundsToGo": 1,
+					"passedLength": 167,
+					"lapTime": 139600000,
+					"ranking": null
+				},
+				{
+					"time": 345500000,
+					"index": 1,
+					"rounds": 2,
+					"roundsToGo": 0,
+					"passedLength": 500,
+					"lapTime": 205900000,
+					"ranking": null
+				}
+			]
+		}
+	],
+	"heat": {
+		"round": 1,
+		"number": 2
+	},
+	"distanceId": "ecc19adf-9348-46d3-84ef-868513314863",
+	"competitionId": "7355ba03-5d53-4559-86c3-979590664bff",
+	"typeName": "HeatActivatedEvent"
+}
