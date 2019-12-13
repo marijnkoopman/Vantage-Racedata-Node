@@ -24,7 +24,6 @@ function handle_json(array) {
 		console.log(message);
 		let path = __dirname + `\\logs\\${ new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 5).join("-")} ${message.typeName}.json`;
 		fs.writeFileSync(path, JSON.stringify(message, null, "\t"));
-		// fs.writeFileSync("")
 	});
 }
 
