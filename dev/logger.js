@@ -3,7 +3,6 @@ require("dotenv").config();
 
 const net = require("net");
 const fs = require("fs");
-console.log(__dirname);
 const dir_path = __dirname + `/logs/${new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 5).join("-")}`;
 if(!fs.existsSync(dir_path)) {
 	fs.mkdirSync(dir_path);

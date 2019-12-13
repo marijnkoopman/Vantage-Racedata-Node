@@ -36,11 +36,22 @@ function handle_races(message) {
 function handle_lap(message) {
 	let toGo = message.lap.roundsToGo - 1;
 	let raceId = message.raceId;
-	if(toGo) {
+	if(typeof toGo !== "undefined" && !isNaN(toGo)) {
 		let color = giveColor.get(racer_colors[raceId]);
 		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-		let n_obj = {}
-		n_obj[color] = toGo;
-		io.emit("lap", n_obj);
+		if(toGo > 0) {
+			let n_obj = {}
+			n_obj[color] = toGo;
+			io.emit("lap", n_obj);
+		} else {
+			race_end(message, color);
+		}
 	}
+}
+
+function race_end(message, color) {
+	// Hier later iets anders...
+	let n_obj = {}
+	n_obj[color] = "...";
+	io.emit("lap", n_obj);
 }
