@@ -5,7 +5,6 @@ window.addEventListener("load", () => {
 });
 
 socket.on("lap", data => {
-	console.log(data);
 	Object.entries(data).forEach(entry => {
 		
 		// Entry = [KLEUR, TOGO] dus b.v ["white", 5]
@@ -21,6 +20,7 @@ socket.on("test", data => {
 	console.log(data);
 });
 
+let timeout;
 socket.on("audio", obj => {
 	
 	// De object waarde is of het moet spelen of niet.
@@ -29,11 +29,13 @@ socket.on("audio", obj => {
 	let pause = obj.play ? false : true;
 
 	if(pause) {
-		console.log("Geluid wordt gepauzeerd");
 		document.querySelector("audio").pause();
+		clearTimeout(timeout);
 	} else {
-		console.log("Geluid wordt afgespeeld");
 		document.querySelector("audio").play();
+		timeout = setTimeout(() => {
+			document.querySelector("audio").pause();
+		}, 5e3);
 	}
 
 });
