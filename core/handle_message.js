@@ -36,15 +36,17 @@ function handle_races(message) {
 	// Mogelijk (meestal) HeatActivatedEvent
 	let emit_obj = {}
 	for(let obj of message.races) {
-		let raceId = obj.id;
-		let toGo = obj.estimatedLaps[0].roundsToGo();
+		let raceId = obj.race.id;
+		let toGo = obj.estimatedLaps[0].roundsToGo;
 		let color = giveColor.get(racer_colors[raceId]);
 		emit_obj[color] = toGo;
 	}
+	console.log(emit_obj);
 	io.emit("lap", emit_obj);
 
 }
 function handle_lap(message) {
+	console.log(message);
 	let toGo = message.lap.roundsToGo - 1;
 	let raceId = message.raceId;
 	if(typeof toGo !== "undefined" && !isNaN(toGo)) {

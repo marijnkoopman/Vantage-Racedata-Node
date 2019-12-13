@@ -17,7 +17,7 @@ client.on("data", evt => {
 function handle_json(array) {
 	array = array.filter(i => i.length > 0).map(i => JSON.parse(i));
 	array.forEach(message => {
-		console.log(`${new Date().toJSON().split(/T|\./)[1]} NEW MESSAGE ${"-".repeat(30)}`.bold.green);
+		console.log(`${new Date().toJSON().split(/T|\./)[1]} ${message.typeName} ${"-".repeat(30)}`.bold.green);
 		handle_message(message);
 	});
 }
