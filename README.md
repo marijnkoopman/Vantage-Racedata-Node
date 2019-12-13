@@ -10,10 +10,10 @@ Starten kan vervolgens door te dubbelklikken op "start". Stoppen van de node kan
 
 Standaard zijn het volgende IP en Poortnummer ingesteld voor de Vantage Server:
 
-	192.168.10.249
+	127.0.0.1		// De eigen computer, werkt als je installeert op de Vantage Server
 	52010
 	
-Indien een ander IP of een andere poort vereist is, dan kan dat aangepast worden op regel 3 van tcp.js. Op regel 4 kunt u eventueel de instancename aanpassen.
+Indien een ander IP of een andere poort vereist is, dan kan dat aangepast worden in het .env-bestand. Op regel 4 van TCP.js kunt u eventueel de Instancename aanpassen.
 
 # Frontendgebruik
 Navigeer in een webbrowser naar het IP van de computer waar de node op draait, aangevuld met ":3000" dit opent het rondenbord. Hieronder voorbeelden voor het navigeren op de eigen machine d.m.v. het eigen IP 127.0.0.1
