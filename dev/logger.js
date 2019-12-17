@@ -1,9 +1,15 @@
 
 const fs = require("fs");
 let known_events;
-update_known();
 function update_known() {
-	known_events = Array.from(new Set(fs.readdirSync("logs").map(name => name.split(" ").pop().replace(/\.json/g, ""))));
+	known_events = [];
+	let all_log_dates = fs.readdirSync("logs");
+	for(let dir of all_log_dates) {
+		let files = fs.readdirSync(`logs/${dir}/`).map(name => name.split(" ").pop().replace(/\.json/g, "");
+		known_events = [...known_events, ...files];
+	}
+	known_events = Array.from(new Set(known_events));
+	// known_events = Array.from(new Set(fs.readdirSync("logs"))));
 }
 
 require("colors");
@@ -14,6 +20,7 @@ const dir_path = __dirname + `/logs/${new Date().toJSON().replace(/\.|:/g, "-").
 if(!fs.existsSync(dir_path)) {
 	fs.mkdirSync(dir_path);
 }
+update_known();
 
 const client = net.createConnection(process.env.PORT, process.env.HOST, () => {
 	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Logger","version":"0.1"}\n`);
