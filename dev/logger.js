@@ -1,30 +1,15 @@
 
-const known_events = [
-	"InstanceSwitchedEvent",
-	"RecoverBeginEvent",
-	"CompetitionActivatedEvent",
-	"DistanceActivatedEvent",
-	"HeatActivatedEvent",
-	"RecoverEndEvent",
-	"RaceNextLapIndexChangedEvent",
-	"HeatStartedEvent",
-	"RacePassingAddedEvent",
-	"RaceLapAddedEvent",
-	"LastPresentedRaceLapChangedEvent",
-	"RaceLapUpdatedEvent",
-	"HeartbeatEvent",
-	"HeatNextLapIndexChangedEvent",
-	"HeatCommittedEvent",
-	"HeatDeactivatedEvent",
-	"HeatClearedEvent",
-	"DistanceDeactivatedEvent"
-];
+const fs = require("fs");
+let known_events;
+update_known();
+function update_known() {
+	known_events = Array.from(new Set(fs.readdirSync("logs").map(name => name.split(" ").pop().replace(/\.json/g, ""))));
+}
 
 require("colors");
 require("dotenv").config();
 
 const net = require("net");
-const fs = require("fs");
 const dir_path = __dirname + `/logs/${new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 5).join("-")}`;
 if(!fs.existsSync(dir_path)) {
 	fs.mkdirSync(dir_path);
@@ -51,15 +36,12 @@ function handle_json(array) {
 
 		console.log(`${new Date().toJSON().split(/T|\./)[1]} NEW MESSAGE ${"-".repeat(30)}`.bold.green);
 		
-		if(known_events.includes(message.typeName)) {
-			known_events.push(message.typeName);
-			return;
-		}
+		if(known_events.includes(message.typeName)) return;
 		console.log(message);
 		
 		let path = `${dir_path}/${ new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 6).join("-")} ${message.typeName}.json`;
 		fs.writeFileSync(path, JSON.stringify(message, null, "\t"));
-	
+		update_known();
 	});
 }
 
