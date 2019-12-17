@@ -6,6 +6,8 @@ const giveColor = new Map([
 	[2, "yellow"],
 	[3, "blue"],
 ]);
+let competitions = {}
+let currentHeats = {}
 let racer_colors = {}
 
 module.exports = message => {
@@ -16,6 +18,13 @@ module.exports = message => {
 		case "lap": 
 			handle_lap(message);
 			break;
+		case "startRecover": 
+			console.log("Recovering started");
+			break;
+		case "newCompetion": 
+			console.log("New competition added");
+			//lookup competitionId in object competitions and replace or append competition from mesage
+			break;
 		default:
 			// Other message type
 			break;
@@ -25,6 +34,8 @@ module.exports = message => {
 function get_message_type(message) {
 	if(message.races) return "races";
 	if(message.lap) return "lap";
+	if(message.typeName == "RecoverBeginEvent") return "startRecover";
+	if(message.typeName == "CompetitionActivatedEvent") return "newCompetition";
 	return "Unknown";
 }
 
