@@ -1,5 +1,5 @@
-# Let op: dit is een eerste proof of concept
-# Status: alleen voor testdoeleinden
+**Let op: dit is een eerste proof of concept**
+**Status: alleen voor testdoeleinden**
 
 # Introductie
 Deze NodeJS-applicatie ontvangt data van de Vantage Server en maakt die vervolgens binnen het LAN beschikbaar in de vorm van HTML-pagina's met live-update van de data. Initieel met als doel het gebruik van een smart-TV als rondenbord. Maar andere pagina's met wedstrijdinformatie kunnen in de toekomst zeker toegevoegd worden.
