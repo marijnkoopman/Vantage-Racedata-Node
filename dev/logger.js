@@ -1,3 +1,25 @@
+
+const known_events = [
+	"InstanceSwitchedEvent",
+	"RecoverBeginEvent",
+	"CompetitionActivatedEvent",
+	"DistanceActivatedEvent",
+	"HeatActivatedEvent",
+	"RecoverEndEvent",
+	"RaceNextLapIndexChangedEvent",
+	"HeatStartedEvent",
+	"RacePassingAddedEvent",
+	"RaceLapAddedEvent",
+	"LastPresentedRaceLapChangedEvent",
+	"RaceLapUpdatedEvent",
+	"HeartbeatEvent",
+	"HeatNextLapIndexChangedEvent",
+	"HeatCommittedEvent",
+	"HeatDeactivatedEvent",
+	"HeatClearedEvent",
+	"DistanceDeactivatedEvent"
+];
+
 require("colors");
 require("dotenv").config();
 
@@ -7,7 +29,6 @@ const dir_path = __dirname + `/logs/${new Date().toJSON().replace(/\.|:/g, "-").
 if(!fs.existsSync(dir_path)) {
 	fs.mkdirSync(dir_path);
 }
-
 
 const client = net.createConnection(process.env.PORT, process.env.HOST, () => {
 	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"Logger","version":"0.1"}\n`);
@@ -27,10 +48,18 @@ function handle_json(array) {
 
 	array = array.filter(i => i.length > 0).map(i => JSON.parse(i));
 	array.forEach(message => {
+
 		console.log(`${new Date().toJSON().split(/T|\./)[1]} NEW MESSAGE ${"-".repeat(30)}`.bold.green);
+		
+		if(known_events.includes(message.typeName)) {
+			known_events.push(message.typeName);
+			return;
+		}
 		console.log(message);
+		
 		let path = `${dir_path}/${ new Date().toJSON().replace(/\.|:/g, "-").replace(/T/g, "    ").split("-").slice(0, 6).join("-")} ${message.typeName}.json`;
 		fs.writeFileSync(path, JSON.stringify(message, null, "\t"));
+	
 	});
 }
 
