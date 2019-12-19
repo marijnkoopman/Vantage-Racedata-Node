@@ -3,13 +3,14 @@ const fs = require("fs");
 let known_events;
 function update_known() {
 	known_events = [];
-	let all_log_dates = fs.readdirSync("logs");
+	let all_log_dates = fs.readdirSync("dev/logs");
 	for(let dir of all_log_dates) {
-		let files = fs.readdirSync(`logs/${dir}/`).map(name => name.split(" ").pop().replace(/\.json/g, ""));
+		let files = fs.readdirSync(`dev/logs/${dir}/`).map(name => name.split(" ").pop().replace(/\.json/g, ""));
 		known_events = [...known_events, ...files];
 	}
+	// known_events = Array.from(new Set(known_events));
 	known_events = Array.from(new Set(known_events));
-	// known_events = Array.from(new Set(fs.readdirSync("logs"))));
+	console.log(known_events)
 }
 
 require("colors");

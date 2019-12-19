@@ -1,6 +1,6 @@
 const net = require("net");
 const handle_message = require("./handle_message");
-const client = net.createConnection(process.env.PORT, process.env.HOST, () => {
+const client = net.createConnection(process.env.VantageServerPort, process.env.VantageServerIP, () => {
 	client.write(`{"applicationName":"Vantage Info Node V2019-12-06","instanceName":"${process.env.NAME}","version":"0.1"}\n`);
 });
 

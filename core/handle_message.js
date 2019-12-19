@@ -7,7 +7,12 @@ const giveColor = new Map([
 	[3, "blue"],
 ]);
 let competitions = {}
-let currentHeats = {}
+let indexFirstHeat = {}
+let indexSecondHeat ={}
+let indexWhite = {}
+let indexRed = {}
+let indexYellow = {}
+let indexBlue = {}
 let racer_colors = {}
 
 module.exports = message => {
@@ -34,8 +39,12 @@ module.exports = message => {
 function get_message_type(message) {
 	if(message.races) return "races";
 	if(message.lap) return "lap";
-	if(message.typeName == "RecoverBeginEvent") return "startRecover";
 	if(message.typeName == "CompetitionActivatedEvent") return "newCompetition";
+	if(message.typeName == "HeatActivatedEvent") return "heatActivated";
+	if(message.typeName == "HeatStartedEvent") return "heatStarted";
+	if(message.typeName == "RaceNextLapIndexChangedEvent") return "raceIndexChanged";
+	if(message.typeName == "HeatNextLapIndexChangedEvent") return "heatIndexChanged";
+	if(message.typeName == "HeatDeactivatedEvent") return "heatDeactivated";
 	return "Unknown";
 }
 
@@ -63,7 +72,7 @@ function handle_lap(message) {
 	if(typeof toGo !== "undefined" && !isNaN(toGo)) {
 		let color = giveColor.get(racer_colors[raceId]);
 		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-		if(toGo > 0) {
+		if(toGo > -1) {
 			let n_obj = {}
 			n_obj[color] = toGo;
 			io.emit("lap", n_obj);

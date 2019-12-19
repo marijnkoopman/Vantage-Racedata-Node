@@ -1,0 +1,23 @@
+500m start start
+4x doorkomst
+4x finish
+4x commit
+nieuw kwartet
+2x start
+2x clear
+2x start
+2x clear
+laden 10k
+2x start
+4x opening
+4x doorkomst
+2x clear
+disconnect
+connect met 167m empty
+disconnect
+
+
+observaties:
+
+- pas een goede aanduiding aantal rondes toGo na de eerste volle ronde. Op de 500m dus pas na de finish.
+- bij finish springt rondeteller op -1, dan moet ie op 0 blijven of wipen
