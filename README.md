@@ -25,7 +25,7 @@ Indien een ander IP of een andere poort vereist is, dan kan dat aangepast worden
 Starten kan vervolgens door te dubbelklikken op "start". Of in de terminal met `npm run` of `node .`. Stoppen van de node kan met ctrl-c.
 
 # Frontendgebruik
-Navigeer in een webbrowser naar het IP van de computer waar de node op draait, aangevuld met ":3000" dit opent het rondenbord. Hieronder voorbeelden voor het navigeren op de eigen machine d.m.v. het eigen IP 127.0.0.1
+Navigeer in een webbrowser naar het IP van de computer waar de node op draait, aangevuld met ":3000" dit opent het rondenbord. Wanneer er op de gebruikte pc geen andere webserver actief is kunt u dit in het .env-bestand wijzigen naar poort 80. In dat geval hoeft u voor het openen van de pagina’s geen poortnummer meer op te geven. Hieronder voorbeelden voor het navigeren op de eigen machine d.m.v. het eigen IP 127.0.0.1
 
 	127.0.0.1:3000			// Rondenbord
 	127.0.0.1:3000/lapboard		// Rondenbord
