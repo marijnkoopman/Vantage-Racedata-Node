@@ -6,14 +6,14 @@ const giveColor = new Map([
 	[2, "yellow"],
 	[3, "blue"],
 ]);
-let competitions = {}
-let indexFirstHeat = {}
-let indexSecondHeat ={}
-let indexWhite = {}
-let indexRed = {}
-let indexYellow = {}
-let indexBlue = {}
-let racer_colors = {}
+let competitions = {};
+let indexFirstHeat = {};
+let indexSecondHeat = {};
+let indexWhite = {};
+let indexRed = {};
+let indexYellow = {};
+let indexBlue = {};
+let racer_colors = {};
 
 module.exports = message => {
 	switch(get_message_type(message)) {
@@ -23,18 +23,19 @@ module.exports = message => {
 		case "lap": 
 			handle_lap(message);
 			break;
-		case "startRecover": 
-			console.log("Recovering started");
+		case "heatDeactivated": 
+			console.log("Heat deactivated");
 			break;
-		case "newCompetion": 
-			console.log("New competition added");
+		case "heatStarted": 
+			console.log("Heat started");
+			heatStarted();
 			//lookup competitionId in object competitions and replace or append competition from mesage
 			break;
 		default:
 			// Other message type
 			break;
 	}
-}
+};
 
 function get_message_type(message) {
 	if(message.races) return "races";
@@ -48,13 +49,15 @@ function get_message_type(message) {
 	return "Unknown";
 }
 
+let predictedToGo = {};
+
 function handle_races(message) {
 	for(let race of message.races) {
 		racer_colors[race.race.id] = race.race.color;
 	}
 
 	// Mogelijk (meestal) HeatActivatedEvent
-	let emit_obj = {}
+	let emit_obj = {};
 	for(let obj of message.races) {
 		let raceId = obj.race.id;
 		let toGo = obj.estimatedLaps[0].roundsToGo;
@@ -62,9 +65,14 @@ function handle_races(message) {
 		emit_obj[color] = toGo;
 	}
 	console.log(emit_obj);
-	io.emit("lap", emit_obj);
-
+	// io.emit("lap", emit_obj);
+	predictedToGo = emit_obj;
 }
+
+function heatStarted() {
+	io.emit("lap", predictedToGo);
+}
+
 function handle_lap(message) {
 	console.log(message);
 	let toGo = message.lap.roundsToGo - 1;
@@ -73,7 +81,7 @@ function handle_lap(message) {
 		let color = giveColor.get(racer_colors[raceId]);
 		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
 		if(toGo > -1) {
-			let n_obj = {}
+			let n_obj = {};
 			n_obj[color] = toGo;
 			io.emit("lap", n_obj);
 		} else {
@@ -84,7 +92,7 @@ function handle_lap(message) {
 
 function race_end(message, color) {
 	// Hier later iets anders...
-	let n_obj = {}
+	let n_obj = {};
 	n_obj[color] = "...";
 	io.emit("lap", n_obj);
 }
