@@ -23,8 +23,9 @@ module.exports = message => {
 		case "lap": 
 			handle_lap(message);
 			break;
-		case "heatDeactivated": 
-			console.log("Heat deactivated");
+		case "heatCleared": 
+			console.log("Heat cleared");
+			heatCleared();
 			break;
 		case "heatStarted": 
 			console.log("Heat started");
@@ -45,7 +46,7 @@ function get_message_type(message) {
 	if(message.typeName == "HeatStartedEvent") return "heatStarted";
 	if(message.typeName == "RaceNextLapIndexChangedEvent") return "raceIndexChanged";
 	if(message.typeName == "HeatNextLapIndexChangedEvent") return "heatIndexChanged";
-	if(message.typeName == "HeatDeactivatedEvent") return "heatDeactivated";
+	if(message.typeName == "HeatClearedEvent") return "heatCleared";
 	return "Unknown";
 }
 
@@ -71,6 +72,10 @@ function handle_races(message) {
 
 function heatStarted() {
 	io.emit("lap", predictedToGo);
+}
+
+function heatCleared() {
+	io.emit("lap", {});
 }
 
 function handle_lap(message) {
