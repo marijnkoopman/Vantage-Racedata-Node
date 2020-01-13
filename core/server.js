@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/lapboard/", (req, res) => {
-	res.sendFile(__dirname + "/public/lapboard.html");
+	res.sendFile(__dirname + "/lapboard/lapboard.html");
 });
 
 server.listen(port, () => {

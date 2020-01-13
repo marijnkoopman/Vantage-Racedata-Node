@@ -25,7 +25,7 @@ module.exports = message => {
 			break;
 		case "heatCleared": 
 			console.log("Heat cleared");
-			heatCleared();
+			heatCleared(message);
 			break;
 		case "heatStarted": 
 			console.log("Heat started");
@@ -74,8 +74,11 @@ function heatStarted() {
 	io.emit("lap", predictedToGo);
 }
 
-function heatCleared() {
-	io.emit("lap", {});
+function heatCleared(message) {
+	for (let i = 0; i = 3; i++) {
+		let color = giveColor.get(i);
+		race_end(message, color);
+	}
 }
 
 function handle_lap(message) {
