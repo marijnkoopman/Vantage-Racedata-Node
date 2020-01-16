@@ -22,17 +22,17 @@ function switchMode(err, value) {
 
 function lapIncrease(err, value) {
 	if (err) throw err;
-	console.log('switchmode =', value);
+	console.log('lapIncrease =', value);
 }
 
 function lapDecrease(err, value) {
 	if (err) throw err;
-	console.log('switchmode =', value);
+	console.log('lapDecrease =', value);
 }
 
 function ringBell(err, value) {
 	if (err) throw err;
-	console.log('switchmode =', value);
+	console.log('ringBell =', value);
 }
 
 process.on('SIGINT', _ => {
