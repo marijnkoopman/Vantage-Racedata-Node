@@ -10,10 +10,6 @@ app.get("/", (req, res) => {
 	res.redirect("/lapboard/");
 });
 
-app.get("/lapboard/", (req, res) => {
-	res.sendFile(__dirname + "/lapboard/lapboard.html");
-});
-
 server.listen(port, () => {
 	console.log("Listening on " + port);
 });
