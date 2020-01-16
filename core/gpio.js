@@ -10,10 +10,10 @@ for(let key of Object.keys(buttons)) {
 	buttons[key] = new gpio(buttons[key], 'in', 'both', {debounceTimeout: 10});
 }
 
-button.switchMode.watch(switchMode);
-button.lapIncrease.watch(lapIncrease);
-button.lapDecrease.watch(lapDecrease);
-button.ringBell.watch(ringBell);
+buttons.switchMode.watch(switchMode);
+buttons.lapIncrease.watch(lapIncrease);
+buttons.lapDecrease.watch(lapDecrease);
+buttons.ringBell.watch(ringBell);
 
 function switchMode(err, value) {
 	if (err) throw err;
