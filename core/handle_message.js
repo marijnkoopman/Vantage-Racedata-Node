@@ -16,6 +16,7 @@ let indexBlue = {};
 let racer_colors = {};
 
 module.exports = message => {
+	// console.log(get_message_type(message));
 	switch(get_message_type(message)) {
 		case "races":
 			handle_races(message);
@@ -30,6 +31,11 @@ module.exports = message => {
 		case "heatStarted": 
 			console.log("Heat started");
 			heatStarted();
+			//lookup competitionId in object competitions and replace or append competition from mesage
+			break;
+		case "raceIndexChanged": 
+			console.log("Race index changed");
+			raceIndexChanged(message);
 			//lookup competitionId in object competitions and replace or append competition from mesage
 			break;
 		default:
@@ -52,6 +58,23 @@ function get_message_type(message) {
 
 let predictedToGo = {};
 
+function raceIndexChanged(message) {
+	console.log(message);
+	let toGo = message.roundsToGo;
+	let raceId = message.raceId;
+	if(typeof toGo !== "undefined" && !isNaN(toGo)) {
+		let color = giveColor.get(racer_colors[raceId]);
+		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
+		if(toGo > -1) {
+			let n_obj = {};
+			n_obj[color] = toGo;
+			io.emit("lap", n_obj);
+		} else {
+			race_end(message, color);
+		}
+	}
+}
+
 function handle_races(message) {
 	for(let race of message.races) {
 		racer_colors[race.race.id] = race.race.color;
@@ -65,8 +88,8 @@ function handle_races(message) {
 		let color = giveColor.get(racer_colors[raceId]);
 		emit_obj[color] = toGo;
 	}
-	console.log(emit_obj);
-	// io.emit("lap", emit_obj);
+		console.log(emit_obj);
+		io.emit("lap", emit_obj);
 	predictedToGo = emit_obj;
 }
 
@@ -82,20 +105,20 @@ function heatCleared(message) {
 }
 
 function handle_lap(message) {
-	console.log(message);
-	let toGo = message.lap.roundsToGo - 1;
-	let raceId = message.raceId;
-	if(typeof toGo !== "undefined" && !isNaN(toGo)) {
-		let color = giveColor.get(racer_colors[raceId]);
-		console.log(`Racer ${color} moet nog ${toGo} rondjes`);
-		if(toGo > -1) {
-			let n_obj = {};
-			n_obj[color] = toGo;
-			io.emit("lap", n_obj);
-		} else {
-			race_end(message, color);
-		}
-	}
+	// console.log(message);
+	// let toGo = message.lap.roundsToGo - 1;
+	// let raceId = message.raceId;
+	// if(typeof toGo !== "undefined" && !isNaN(toGo)) {
+	// 	let color = giveColor.get(racer_colors[raceId]);
+	// 	console.log(`Racer ${color} moet nog ${toGo} rondjes`);
+	// 	if(toGo > -1) {
+	// 		let n_obj = {};
+	// 		n_obj[color] = toGo;
+	// 		io.emit("lap", n_obj);
+	// 	} else {
+	// 		race_end(message, color);
+	// 	}
+	// }
 }
 
 function race_end(message, color) {
